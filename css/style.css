@@ -1,0 +1,1340 @@
+@font-face {
+  font-family: 'Antquab';
+  src: url('../fonts/Antquab.woff2') format('woff2'), url('../fonts/Antquab.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Antquabi';
+  src: url('../fonts/Antquabi.woff2') format('woff2'), url('../fonts/Antquabi.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Antquai';
+  src: url('../fonts/Antquai.woff2') format('woff2'), url('../fonts/Antquai.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bkant';
+  src: url('../fonts/BkantP.woff2') format('woff2'), url('../fonts/BkantP.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sonika';
+  src: url('../fonts/SonikaPersonalUse.woff2') format('woff2'), url('../fonts/SonikaPersonalUse.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sonika';/*Light */
+  src: url('../fonts/SonikaPersonalUseLight.woff2') format('woff2'), url('../fonts/SonikaPersonalUseLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SonikaLightItalic';/*LightItalic*/
+  src: url('../fonts/SonikaPersonalUseLightItalic.woff2') format('woff2'), url('../fonts/SonikaPersonalUseLightItalic.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SonikaRegularItalic';/*RegularItalic*/
+  src: url('../fonts/SonikaPersonalUseRegularItalic.woff2') format('woff2'), url('../fonts/SonikaPersonalUseRegularItalic.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sonika-Black';
+  src: url('../fonts/SonikaPersonalUseBlack.woff2') format('woff2'), url('../fonts/SonikaPersonalUseBlack.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sonika-BlackItalic';/* Italic */
+  src: url('../fonts/SonikaPersonalUseBlackItalic.woff2') format('woff2'), url('../fonts/SonikaPersonalUseBlackItalic.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sonika-Thin';
+  src: url('../fonts/SonikaPersonalUseThin.woff2') format('woff2'), url('../fonts/SonikaPersonalUseThin.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sonika-Thin';/* Italic */
+  src: url('../fonts/SonikaPersonalUseThinItalic.woff2') format('woff2'), url('../fonts/SonikaPersonalUseThinItalic.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-mineShaft: #333;
+  --color-white: #fff;
+  --color-wildSand: #f6f6f6;
+  --color-gallery: #eaeaea;
+  --color-gallery: #eaeaea;
+  --color-dustyGray: #999;
+  --color-jacarta: #3a2a68;
+  --color-orient: #00558e;/*--color-mauve*/
+  --color-toreaBay: #0a2896;/*--color-purpleHeart*/
+  --color-azureRadiance: #0181e4;
+  --color-charade: #21242e;
+  --color-sulu: #b8ec64;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  /*Для .wrapper*/
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'OpenSans', sans-serif;
+  /*Общий шрифт 400*/
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--color-mineShaft);
+}
+
+img {
+  max-width: 100%;
+}
+
+img, svg {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*h1,
+h2,
+h3,
+p,
+a {
+  перенос слов
+  word-wrap: break-word;
+}*/
+
+h1, h2, h3, h4, h5, h6 {
+  /*Обязательно убираем маргины у заголовок(Саша-Скиллбохс) */
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* отключает поведение изменения размера для textarea(Блок сообщения) */
+textarea {
+  resize: none;
+}
+
+button {
+  /*Лупа*/
+  background-color: inherit;
+  border: none;
+}
+
+.btn {
+  position: relative;
+  padding: 19px 35px;
+  border: 2px solid var(--color-toreaBay);
+  border-radius: 10px;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-toreaBay);
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: bacground-color .4s ease-in-out;
+  -ms-transition: bacground-color .4s ease-in-out;
+  -moz-transition: bacground-color .4s ease-in-out;
+  -o-transition: bacground-color .4s ease-in-out;
+  transition: bacground-color .4s ease-in-out;
+}
+
+.btn:focus {
+  outline: none;
+  color: var(--color-white);
+  background-color: var(--color-orient);
+}
+
+.btn:hover {
+  color: var(--color-white);
+  background-color: var(--color-toreaBay);
+}
+
+.btn:active {
+  border: 2px solid var(--color-jacarta);
+  color: var(--color-white);
+  background-color: var(--color-jacarta);
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.container {
+  /*1380px = 1280px + 50px + 50px не менять!*/
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.h2 {
+  font-size: 48px;
+}
+
+.h3 {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.desrc {
+  margin: 0;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--color-mineShaft);
+}
+
+/*Биб. слайдера*/
+.image-slider {
+  padding: 0;
+}
+
+.swiper-wraper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition-property: transform;
+}
+
+
+/*Общие продуктовые карточки swiper*/
+.product-list {
+  position: relative;
+  display: flex;
+}
+
+.product-item {
+  position: relative;
+  display: flex;/*Для выравнивание карточек product__info */
+  /*padding-bottom для переполнения*/
+  padding: 10px 15px 13px;
+  border-radius: 10px;
+}
+
+.product-item.swiper-slide {
+  height: auto;/*Для выравнивание карточек: product__info*/
+}
+
+.product-article {
+  display: flex;/*Для выравнивание карточек: product__info*/
+  flex-direction: column;/*Для выравнивание карточек: product__info*/
+}
+
+.product-asterisk {
+  position: absolute;
+  top: 34px;
+  left: 30px;
+  display: flex;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-crusta);
+}
+
+.product-asterisk svg {
+  margin-right: 7px;
+}
+
+.product-info {/*Карточки: product__info*/
+  padding: 18px 11px 0 15px;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.product-block {
+  display: flex;/*Для выравнивание карточек li*/
+  justify-content: space-between;/*Для выравнивание карточек li*/
+  flex-direction: column;/*Для выравнивание карточек li*/ 
+  /*Для переполнения*/
+  margin-bottom: 16px;
+}
+
+.product-text {
+  display: block;
+  margin-top: 0;
+}
+
+.product-text-link {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;/*h4 поумолчанию bold*/
+  font-size: 24px;
+  color: var(--color-mineShaft);
+  -webkit-transition: color .4s ease-in-out;
+  -ms-transition: color .4s ease-in-out;
+  -moz-transition: color .4s ease-in-out;
+  -o-transition: color .4s ease-in-out;
+  transition: color .4s ease-in-out;
+  cursor: pointer;
+}
+
+.product-text-link:focus {
+  color: var(--color-jacarta);
+  outline: none;
+}
+
+.product-text-link:hover {
+  color: var(--color-toreaBay);
+}
+
+.product-text-link:active {
+  color: var(--color-jacarta);
+}
+
+.product-block-span {
+  position: absolute;
+  display: block; 
+  /*Для переполнения*/  
+  bottom: 30px; 
+}
+
+.product-span {
+  font-size: 16px;
+  color: var(--color-dustyGray);
+  line-height: 23.4px;
+}
+
+.product-btn {
+  display: block;
+  margin-top: 23px;
+  padding: 17px 33px;
+  border: 2px solid var(--color-toreaBay);
+  border-radius: 10px;
+  width: max-content;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+}
+/* // Общие продуктовые карточки divan__list-catalog__list-color-product__swiper-wraper*/
+
+
+/*Стили формы ошибки, цвет текста в файле group.js - colorWrong: '#ff6972'*/
+.js-validate-error-label {
+  position: absolute;
+  top: -26.5px;
+  left: 20px;
+  font-size: 12px;
+}
+
+/*Для data-validate-field="checkbox"*/
+.main-form__checkbox-container .js-validate-error-label {
+  top: -15px;
+  left: 0px;
+}
+/* // Для data-validate-field="checkbox"*/
+
+/*Для JustValidate галочка-Принимаю в main-form */
+input[type=checkbox]:focus ~ label::before {
+  outline: none;
+  border: 2px solid rgb(255, 105, 114);
+  background-color: var(--color-orient);
+}
+
+input[type=checkbox]:active ~ label::before {
+  border: 2px solid var(--color-sulu);
+}
+/* // Для JustValidate галочка-Принимаю в main-form */
+
+/*ховерит input в main-form*/
+.main-form__input-checkbox:hover, input[type="checkbox"]:hover ~ label::before {
+  border: 1px solid var(--color-jacarta);
+  background-color: var(--color-jacarta);
+}
+
+/*---Скроллбар(main-form-ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ)---*/
+.simplebar-mask {
+  /*Чтобы текст не прятался в прокрутке в блок*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.simplebar-content-wrapper {
+  /*авто включение js для скролл*/
+  overflow: auto;
+}
+
+.simplebar-track.simplebar-vertical {
+  /*Прокрутку двигаем*/ 
+  right: 10px;
+  bottom: 20px;
+} 
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  /*Прокрутку двигаем*/
+  top: 65px;
+  right: 0;
+}
+
+.simplebar-scrollbar::before {
+  /*Из библиотеки*/
+  /*Здесь(кодепен) цвет не работает*/
+  /*На компе и в css работает*/
+  height: 70px;
+  background-color: var(--color-toreaBay);
+  /* opacity: 1; */
+}
+/*--- // Скроллбар---*/
+
+/*** modal-Модальное окно***/
+.modal {  
+  display: none;
+  justify-content: center;
+  width: 750px;
+  background-color: var(--color-white);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  /*Для modal-active*/
+  transform: scale(0);
+}
+
+.modal-active {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-color: rgba(51,51,51,.3);
+  transform: scale(1);
+}
+
+.modal-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  border-radius: 10px;
+  width: 66.8%;
+  height: max-content;  
+  background-color: white;  
+  transform: scale(1);
+  transition: transform 500ms;  
+}
+/*** // modal-Модальное окно***/
+
+/*Крест выключатель модального окна*/
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  outline: none; 
+  border: 1px solid transparent; 
+  font-size: 25px;
+  -webkit-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+  -ms-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+  -moz-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+  -o-transition: color .4s ease-in-out, background-color .4s ease-in-out;
+  transition: color .4s ease-in-out, background-color .4s ease-in-out;
+  cursor: pointer;  
+}
+
+.modal-close:focus {  
+  color: var(--color-toreaBay);
+}
+
+.modal-close:hover {
+  color: var(--color-toreaBay);
+  background-color: var(--color-blueChalk);
+}
+
+.modal-close:active {
+  color: var(--color-toreaBay);
+  background-color: transparent;
+}
+/* // Крест выключатель модального окна*/
+
+/*---Стили формы ошибки, галка, цвет текста в файле group.js(Слоник модальное окно) - colorWrong: '#ff6972'---*/
+.modal-cti-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;
+  height: 100%;  
+  background-color: rgba(51, 51, 51, 0.3);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0.15s linear, opacity 0.15s linear;
+  -ms-transition: visibility 0.15s linear, opacity 0.15s linear;
+  -moz-transition: visibility 0.15s linear, opacity 0.15s linear;
+  -o-transition: visibility 0.15s linear, opacity 0.15s linear;
+  transition: visibility 0.15s linear, opacity 0.15s linear;
+}
+
+.modal-cti-js_block {
+  display: block;
+}
+
+.modal-cti-window {
+  position: relative;
+  display: none;
+  align-items: center;
+  flex-basis: 624px;
+  padding: 30px;
+  border-radius: 10px;
+  min-width: 260px;
+  background-color: var(--color-white);
+  opacity: 0;
+  visibility: hidden;  
+  -webkit-transition: visibility 0.15s linear, opacity 0.15s linear;
+  -ms-transition: visibility 0.15s linear, opacity 0.15s linear;
+  -moz-transition: visibility 0.15s linear, opacity 0.15s linear;
+  -o-transition: visibility 0.15s linear, opacity 0.15s linear;
+  transition: visibility 0.15s linear, opacity 0.15s linear;  
+  overflow: hidden;
+}
+
+.modal-cti-show {
+  visibility: visible;
+  opacity: 1;
+}
+/*--- // Стили формы ошибки, галка, цвет текста в файле group.js(Слоник модальное окно) - colorWrong: '#ff6972'---*/
+
+
+/***Шапка header-1920px***/
+.header {
+  position: relative;
+  padding: 20px 0;
+  max-height: max-content;
+  background-color: rgba(1, 129, 228, 5%);
+}
+
+.header__container {
+  display: flex;
+}
+
+.header__logo {
+  display: grid;
+  grid-template-columns: 30px max-content;
+  grid-auto-rows: 20px;
+  grid-auto-flow: dense;
+  gap: 7px;
+  margin-right: auto;
+  min-width: max-content;/*Чтобы в переполнение не ломало*/
+  font-family: 'Antquab', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: #0A2896;
+  -webkit-transition: opacity .4s ease-in-out;
+  -ms-transition: opacity .4s ease-in-out;
+  -moz-transition: opacity .4s ease-in-out;
+  -o-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
+}
+
+.header__logo:focus {
+  outline: 2px solid var(--color-azureRadiance);
+  outline-offset: 8px;
+}
+
+.header__logo:hover {
+  opacity: 0.6;
+}
+
+.header__logo:active {
+  opacity: 0.4;
+  outline: none;
+}
+
+.header__logo .logo-three {
+  margin-top: -10px;
+  font-family: 'Sonika', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-azureRadiance);
+}
+
+.header__logo-img {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.header__linkPhone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: 'TTNorms-Regular';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--color-orient);
+  -webkit-transition: color .4s ease-in-out;
+  -moz-transition: color .4s ease-in-out;
+  -ms-transition: color .4s ease-in-out;
+  -o-transition: color .4s ease-in-out;
+  transition: color .4s ease-in-out;
+  outline: none;
+}
+
+.header__linkPhone svg {
+  position: absolute;
+  margin-left: -18px;
+}
+
+.header__linkPhone:focus {
+  color: var(--color-azureRadiance);
+}
+
+.header__linkPhone:focus path {
+  stroke: var(--color-azureRadiance);
+}
+
+.header__linkPhone:hover {
+  color: var(--color-charade);
+}
+
+.header__linkPhone:hover path {
+  stroke: var(--color-charade);
+}
+
+.header__linkPhone:active, .header__linkPhone:active path {
+  opacity: 0.6;
+}
+
+.header__linkPhone path {
+  -webkit-transition: stroke .4s ease-in-out;
+  -moz-transition: stroke .4s ease-in-out;
+  -ms-transition: stroke .4s ease-in-out;
+  -o-transition: stroke .4s ease-in-out;
+  transition: stroke .4s ease-in-out;
+}
+/*** // Шапка header-1920px***/
+
+
+/***hero-1920px**
+.hero__h2 {
+  font-family: 'Antquab', sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 72px;
+  color: var(--color-jacarta);
+}*/
+
+/*** // hero-1920px***/
+
+
+/*** product swiper 1920px***/
+.product {
+  padding: 265px 0 104px;
+}
+
+.product__swiper {
+  position: relative;
+}
+
+.product__swiper-wraper.swiper-wrapper {
+  /*Карточки одной ширины в слайдер*/
+  box-sizing: inherit;
+}
+
+.product__item {
+  flex-direction: column;/*Для выравнивание карточек product__info*/  
+}
+
+.product__item.swiper-slide {
+  padding-bottom: 11px;
+}
+
+.product__item.swiper-slide:nth-child(2n) {
+  padding-top: 62px;
+}
+
+.product__item.swiper-slide:nth-child(2) .product__image {
+  margin-left: 9px;
+}
+
+.product__item.swiper-slide:nth-child(3) .product__info {
+  padding-top: 15px;
+}
+
+.product__item.swiper-slide:nth-child(4) .product__info {
+  padding-top: 24px;
+}
+
+.product__item.swiper-slide:nth-child(5) .product__info {
+  margin-top: -10px;
+  padding-top: 0;
+}
+
+.product__item.swiper-slide:nth-child(6) .product__info {
+  padding-top: 18px;
+}
+
+.product__article {
+  padding: 0 7px;
+}
+
+.product__article:nth-child(7){
+  padding-top: 100px;
+} 
+
+.product__article_svg {
+  margin-left: 10%;
+  width: 82%;
+  background: url("../img/cti-group.svg") calc(100% - 17px) top / 300px 400px no-repeat;
+}
+
+.product__title-h2 {
+  font-family: 'Antquab', sans-serif;
+  font-weight: 900;
+  font-size: 400px;
+  line-height: 1;
+  color: var(--color-jacarta);
+}
+
+.product__desrc {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.product__desrc_group  {
+  margin-top: -70px;
+  padding-left: 42%;
+  font-family: 'Sonika', sans-serif;
+  font-weight: 600;
+  font-size: 200px;
+  line-height: 1;
+  color: var(--color-jacarta);
+}
+
+.product__info {
+  /*В обычном*/
+  padding: 14px 11px 9px 8px;
+  /*В галпе
+  padding: 9px 11px 9px 8px;*/
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.product__title-h3 {
+  margin-bottom: 25px;
+  font-family: 'Antquab', sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--color-jacarta);
+}
+
+.product__title-h3_cti {
+  margin-bottom: 0;
+  font-family: 'Antquab', sans-serif;
+  font-weight: 900;
+}
+
+.product__title-h4 {
+  font-family: 'Antquab', sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--color-jacarta);
+}
+
+.product__title-h4_group {
+  font-family: 'Sonika', sans-serif;
+  font-weight: 600;
+  color: var(--color-azureRadiance);
+}
+
+.product__title-h4_margin {
+  margin: 80px 0 35px;
+}
+
+.product__sublist {
+  padding-left: 27px;
+}
+
+.product__subitem {
+  list-style: disc;
+  font-size: 42px;
+  line-height: 50px;
+}
+
+.product__span-sonika {
+  font-family: 'Sonika', sans-serif;
+  font-weight: 600;
+  color: var(--color-azureRadiance)
+}
+
+.product__navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  width: 75px;
+}
+
+.product__pagination {
+  text-align: center;
+  margin-right: 7px;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--color-white);
+}
+
+.product__btn {
+  position: relative;
+  /*Сбить стили биб.-.swiper-button-lock*/
+  display: block;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 2px solid var(--color-toreaBay);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: background-color .4s ease-in-out, border .4s ease-in-out;
+  -ms-transition: background-color .4s ease-in-out, border .4s ease-in-out;
+  -moz-transition: background-color .4s ease-in-out, border .4s ease-in-out;
+  -o-transition: background-color .4s ease-in-out, border .4s ease-in-out;
+  transition: background-color .4s ease-in-out, border .4s ease-in-out;
+}
+
+.product__btn:focus {
+  border-radius: 50%;
+  border: 2px solid var(--color-toreaBay);
+  background-color: var(--color-toreaBay);
+  outline: none;
+}
+
+.product__btn:hover {
+  border: 2px solid var(--color-toreaBay);
+  background-color: var(--color-orient);
+}
+
+.product__btn:active {
+  border: 2px solid var(--color-jacarta);
+  background-color: var(--color-jacarta);
+}
+
+.product__btn:disabled {
+  border: 2px solid var(--color-dustyGray);
+}
+
+.product__btn::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transform-origin: center;
+}
+
+.product__btn_prev {
+  margin-right: 15px;
+}
+
+.product__btn_next::before {
+  position: absolute;
+  right: 0;
+  border-top: 2px solid var(--color-toreaBay);
+  border-right: 2px solid var(--color-toreaBay);
+  -webkit-transition: background-color .4s ease-in-out, border .4s ease-in-out;  
+  -ms-transition: background-color .4s ease-in-out, border .4s ease-in-out;
+  -moz-transition: background-color .4s ease-in-out, border .4s ease-in-out;  
+  -o-transition: background-color .4s ease-in-out, border .4s ease-in-out;  
+  transition: background-color .4s ease-in-out, border .4s ease-in-out;
+}
+
+.product__btn_prev::before {
+  border-left: 2px solid var(--color-toreaBay);
+  border-bottom: 2px solid var(--color-toreaBay);
+  -webkit-transition: background-color .4s ease-in-out, border .4s ease-in-out;  
+  -ms-transition: background-color .4s ease-in-out, border .4s ease-in-out;
+  -moz-transition: background-color .4s ease-in-out, border .4s ease-in-out;  
+  -o-transition: background-color .4s ease-in-out, border .4s ease-in-out;  
+  transition: background-color .4s ease-in-out, border .4s ease-in-out;
+}
+
+.product__btn_next:disabled::before {
+  border-top: 2px solid var(--color-dustyGray);
+  border-right: 2px solid var(--color-dustyGray);
+}
+
+.product__btn_prev:disabled::before {
+  border-left: 2px solid var(--color-dustyGray);
+  border-bottom: 2px solid var(--color-dustyGray);
+}
+
+.product__btn_next:focus::before, .product__btn_next:hover::before, .product__btn_next:active::before {
+  border-top: 2px solid var(--color-white);
+  border-right: 2px solid var(--color-white);
+}
+
+.product__btn_prev:focus::before, .product__btn_prev:hover::before, .product__btn_prev:active::before {
+  border-left: 2px solid var(--color-white);
+  border-bottom: 2px solid var(--color-white);
+}
+/*** // product swiper 1920px***/
+
+
+/***Моя форма - main-form-1920px***/
+.main-form {
+  padding: 104px 0 70px;
+}
+
+.main-form__title {
+  margin-bottom: 10px;
+  /*У h2 стоит bold*/
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.main-form__desrc {
+  position: relative;
+  margin-bottom: 15px;
+  width: 50%;
+  color: var(--color-doveGray);
+}
+
+/*---Тултип---*/
+.main-form__tooltip {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--color-crusta);
+  background-color: transparent;
+  -webkit-transition: background-color .4s ease-in-out; 
+    -ms-transition: background-color .4s ease-in-out;
+    -moz-transition: background-color .4s ease-in-out;
+    -o-transition: background-color .4s ease-in-out;
+    transition: background-color .4s ease-in-out;
+}
+
+.main-form__tooltip:focus {
+  outline: none;
+  border: 2px solid var(--color-doveGray);
+}
+
+.main-form__tooltip:hover, .main-form__tooltip:active {
+  border: 2px solid var(--color-crusta);
+  background-color: var(--color-crusta);
+}
+
+[role=tooltip],
+.hidetooltip.hidetooltip.hidetooltip + [role=tooltip] {
+  visibility: hidden;   
+}
+
+[aria-describedby]:hover,
+[aria-describedby]:focus {
+  position: relative;
+}
+
+[aria-describedby]:hover + [role=tooltip],
+[aria-describedby]:focus + [role=tooltip] {
+ visibility: visible;
+}
+
+.main-form__span-text {
+  position: absolute; 
+  top: -81px;
+  right: 0;
+  padding: 5px;
+  width: 238px;
+  background-color: var(--color-mineShaft);
+  color: var(--color-white);
+  text-align: center;
+}
+
+/*Иконка*/
+.main-form__tooltip span {
+  display: block;
+  margin-left: -2px;
+  font-weight: 700;
+  font-size: 10px;  
+  color: var(--color-crusta);
+  -webkit-transition: color .4s ease-in-out; 
+    -ms-transition: color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out;
+    transition: color .4s ease-in-out;
+}
+
+.main-form__tooltip:focus span {
+  color: var(--color-doveGray);
+}
+
+.main-form__tooltip:hover span, .main-form__tooltip:active span {
+  color: var(--color-white);
+}
+
+.main-form__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-form__label {
+  /*Для формы ошибки .js-validate-error-label*/
+  position: relative;
+}
+
+.main-form__input {
+  margin-bottom: 28px;
+  padding: 6px 16px;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  font-size: 16px;
+  line-height: 40px;
+  color: var(--color-dustyGray);
+  background-color: var(--color-wildSand);  
+  -webkit-transition: background-color .4s ease-in-out; 
+  -ms-transition: background-color .4s ease-in-out;
+  -moz-transition: background-color .4s ease-in-out;
+  -o-transition: background-color .4s ease-in-out;
+  transition: background-color .4s ease-in-out;
+}
+
+.main-form__input:focus {
+  outline: none;
+  border: 2px solid var(--color-toreaBay);
+  background-color: var(--color-magnolia);
+}
+
+.main-form__input:hover {
+  background-color: var(--color-gallery);
+}
+ 
+.main-form__input:active {
+  border: 2px solid var(--color-sulu);
+  background-color: var(--color-wildSand);
+}
+
+.main-form__btn {
+  margin-bottom: 16px;/*Отступ для галки*/
+  width: max-content;
+}
+
+.main-form__checkbox-container, .main-form__checkbox {
+  position: relative;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.main-form__input-checkbox, .main-form__label-checkbox {
+  padding-left: 0;
+}
+
+  .main-form__input-checkbox:focus, input[type="checkbox"]:focus ~ label::before, .checkbox-js:checked + .main-form__label-checkbox:focus::before {
+    border: 1px solid rgb(255, 105, 114);
+    background-color: var(--color-orient);
+    outline: none;
+  }
+
+	/*Для Галпа*/
+  .main-form__input-checkbox:focus-visible {
+    outline: none;
+  }
+  /* // Для Галпа*/
+
+ .main-form__input-checkbox:hover, input[type="checkbox"]:hover ~ label::before {
+    border: 1px solid var(--color-toreaBay);
+    background-color: var(--color-toreaBay);
+  }
+
+.main-form__label-checkbox {
+  margin-right: 5px;
+}
+
+.main-form__label-checkbox::before {
+  content: "";
+  position: absolute;
+  left: -17px;
+  border: 1px solid var(--color-dustyGray);
+  border-radius: 2px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-toreaBay);
+  cursor: pointer;
+  -webkit-transition: border-color 0.05s linear, background-color 0.05s linear;
+  -ms-transition: border-color 0.05s linear, background-color 0.05s linear;
+  -moz-transition: border-color 0.05s linear, background-color 0.05s linear;
+  -o-transition: border-color 0.05s linear, background-color 0.05s linear;
+  transition: border-color 0.05s linear, background-color 0.05s linear;
+}
+
+.checkbox-js:checked + .main-form__label-checkbox::before {
+  border-color: var(--color-toreaBay);
+  background-color: var(--color-toreaBay);
+}
+
+.main-form__label-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -15px;
+  border-top: 2px solid var(--color-white);
+  border-right: 2px solid var(--color-white);
+  border-radius: 2px;
+  width: 9px;
+  height: 6px;
+  transform: rotate(123deg);
+  cursor: pointer;
+  -webkit-transition: background-image 0.05s linear;
+  -ms-transition: background-image 0.05s linear;
+  -moz-transition: background-image 0.05s linear;
+  -o-transition: background-image 0.05s linear;
+  transition: background-image 0.05s linear;
+  display: none;
+}
+
+.checkbox-js:checked + .main-form__label-checkbox::after {
+  display: block;
+}
+
+.main-form__link {
+  color: var(--color-toreaBay);
+  text-decoration: underline;
+  -webkit-transition: .2s ease-in-out; 
+  -ms-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.main-form__link:focus {
+  color: var(--color-white);
+  background-color: var(--color-orient);
+  outline: none;
+}
+
+.main-form__link:hover {
+  color: var(--color-white);
+  background-color: var(--color-orient);
+}
+
+.main-form__link:active {
+  color: var(--color-white);
+  background-color: var(--color-toreaBay);
+}
+/* //Иконка*/
+
+/*Для размера модалки*/
+.main-form__block {
+    /*Ширина только в этом модальном окне. Т.к. она не в модальном окне */
+    width: 93%;
+}
+	
+.main-form__block .modal-container {
+	height: 378px;
+}
+
+.main-form__block .simplebar-content {
+	height: 336px;
+}
+/* // Для размера модалки*/
+
+.main-form__container-pol {
+  margin: 40px auto;/*В Gulp-e нужен*/
+  padding: 29px 30px 24px;
+  width: 100%;
+}
+
+.main-form__modal-h2 {
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.main-form__modal-container-pol p {
+  margin: 0;
+}
+/*--- // Тултип---*/
+
+.main-form__modal-sps {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 50px;
+  width: max-content;
+}
+
+.main-form__cti-png {
+  position: relative;
+  margin-bottom: 60px;
+  width: 205px;
+  height: 117px;
+  background-image: url("../img/cti-group.svg");
+  /*Для codepen
+  background-image: url("https://hohrin.expert/wp-content/uploads/2022/04/3.png");*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.main-form__cti-png::before {
+  content: "CTI";
+  position: absolute;
+  top: 30px;
+  font-family: 'Antquab', sans-serif;
+  font-weight: 900;
+  font-size: 75px;
+  color: var(--color-toreaBay);
+}
+
+.main-form__cti-png::after {
+  content: "group";
+  position: absolute;
+  bottom: 0;
+  font-family: 'Sonika', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  color: var(--color-azureRadiance);
+}
+
+.main-form__modal-h2 {
+  margin-top: 0;
+  margin-bottom: 7px;
+  /*У h2 стоит bold*/
+  font-weight: 400;
+  font-size: 32px;
+}
+/*** // Моя форма - main-form-1920px***/
+
+
+/* Подвал - footer-1920 */
+.footer {
+  padding: 25px 0;
+  background-color: var(--color-jacarta);
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+.footer__logo {
+  display: grid;
+  grid-template-columns: 30px max-content;
+  grid-auto-rows: 20px;
+  grid-auto-flow: dense;
+  gap: 7px;
+  margin-right: auto;
+  min-width: max-content;/*Чтобы в переполнение не ломало*/
+  font-family: 'Antquab', sans-serif;
+  font-weight: 900;
+  -webkit-transition: opacity .4s ease-in-out;
+  -ms-transition: opacity .4s ease-in-out;
+  -moz-transition: opacity .4s ease-in-out;
+  -o-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
+}
+
+.footer__logo:focus {
+  outline: 2px solid var(--color-white);
+  outline-offset: 8px;
+}
+
+.footer__logo:hover {
+  opacity: 0.6;
+}
+
+.footer__logo:active {
+  opacity: 0.4;
+  outline: none;
+}
+
+.footer__logo .footer__logo-three {
+  margin-top: -10px;
+  font-family: 'Sonika', sans-serif;
+  font-weight: 600;
+}
+
+.footer__logo-img {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.footer__span-cti {
+  margin: 0 auto;
+  padding-right: 14%;
+}
